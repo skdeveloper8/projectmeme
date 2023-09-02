@@ -79,6 +79,13 @@ li a {
     background-color: #C81010;
     
 }
+.container1 img{
+    width: 70px;
+    height: 70px;
+    margin: 3rem;
+    
+    /* position:sticky; */
+}
 .content{
    padding-left: 1rem;
 }
