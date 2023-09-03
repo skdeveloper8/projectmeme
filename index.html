@@ -44,11 +44,49 @@
             </div>
         </nav>
     </header>
-    <div class="slider-image">
-        <div class="back-img"></div> 
-        <!-- <p class="">Harry Potter Shia Pepe Sonic 10 Inu</p>
-        <p class="">0xa182c0c2ac0d7cef6923c1785a9bdfb8e58a9c04</p> -->
-    </div>  
+    <div class="gallery-wrap">
+        <img src="/back.png" id="backBtn">
+
+
+
+        <div class="gallery">
+            <div>
+
+                <span class="containers"><img src="/finalimage.png"></span>
+                <span class="containers"><img src="/unnamed-1.webp"></span>
+                <span class=" containers"><img src="/unnamed-1.webp"></span>
+
+            </div>
+            <div>
+
+                <span class=" containers"><img src="/images.jpg" ></span>
+                <span class=" containers"><img src="/unnamed-1.webp" alt=""></span>
+                <span class=" containers"><img src="/finalimage.png" alt=""></span>
+
+            </div>
+ 
+        </div>
+        <img src="/next.png" id="nextBtn">
+    </div>
+    <!--  ----------------  Script for slider -->
+    <script>
+        let scrollContainer = document.querySelector(".gallery");
+        let backbtn = document.getElementById("backbtnt");
+        let nextbtn = document.getElementById("nextbtnt");
+        scrollContainer.addEventListener("wheel",(evt) => {
+            evt.preventDefault();
+            scrollContainer. scrollLeft+=evt.deltaX;
+            scrollContainer.style.scrollBehaviour ="auto";
+        })
+        nextBtn.addEventListener("click",()=>{
+            scrollContainer.style.scrollBehaviour ="smooth";
+           scrollContainer.scrollLeft +=1250;
+        });
+        backBtn.addEventListener("click",()=>{
+            scrollContainer.style.scrollBehaviour = "smooth";
+           scrollContainer.scrollLeft -=1250;
+        });
+    </script>
    
 
     </div>
