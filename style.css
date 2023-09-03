@@ -70,6 +70,14 @@ li a {
     padding: 10px;
 }
 
+.container1 img {
+    width: 70px;
+    height: 70px;
+    margin: 3rem;
+
+    /* position:sticky; */
+}
+
 .container2 {
     width: 50%;
     height: 100%;
@@ -77,17 +85,11 @@ li a {
 
 .content1 {
     background-color: #C81010;
-    
+
 }
-.container1 img{
-    width: 70px;
-    height: 70px;
-    margin: 3rem;
-    
-    /* position:sticky; */
-}
-.content{
-   padding-left: 1rem;
+
+.content {
+    padding-left: 1rem;
 }
 
 .content2 {
@@ -105,6 +107,7 @@ li a {
 .container2 img {
     width: 100%;
 }
+
 /* ........................ */
 
 
@@ -162,10 +165,75 @@ li a {
     height: 150px;
 }
 
-.nav-wrapper li:hover{
+.nav-wrapper li:hover {
     box-shadow: 2px 3px #423434;
     background-color: #25353a;
 }
+
+/* .............................................. */
+.gallery {
+    width: 1250px;
+    display: flex;
+    overflow-x: scroll;
+
+
+}
+
+.containers {
+
+    width: 100%;
+    height: 61vh;
+    display: flex;
+
+
+}
+
+
+.gallery div {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 20px;
+    padding: 0px;
+    flex: none;
+}
+
+.gallery div img {
+    width: 100%;
+    filter: grayscale(100%);
+    transition: transform 0.5s;
+}
+
+.gallery::-webkit-scrollbar {
+
+    display: none;
+
+}
+
+.gallery-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5%;
+
+}
+
+#backBtn,
+#nextBtn {
+    width: 50px;
+    cursor: pointer;
+
+}
+
+.gallery div img:hover {
+    filter: grayscale(0);
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+
+
+/* ............................................. */
 
 @media only screen and (max-width: 600px) {
     body {
@@ -223,6 +291,7 @@ li a {
         width: 150px;
         height: 120px;
     }
+
     /* ........................... */
     #sidebar {
         /* display: none; */
@@ -235,7 +304,8 @@ li a {
         background-color: gray;
         z-index: 1;
     }
-    #sidebar ul{
+
+    #sidebar ul {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -244,10 +314,10 @@ li a {
     }
 
     #sidebar li {
-        
+
         margin: auto;
         /* margin-left: 10rem; */
-       
+
         list-style: none;
         margin: 1rem;
         color: aliceblue;
@@ -257,7 +327,8 @@ li a {
         /* border-bottom: 1px solid black; */
 
     }
-    #sidebar li:hover{
+
+    #sidebar li:hover {
         background-color: #25353a;
         box-shadow: 5px 10px #423434;
         border-radius: 5px;
@@ -280,7 +351,7 @@ li a {
     .toggle-btn span {
         /* display: block; */
         display: flex;
-       
+
         background-color: gray;
         width: 30px;
         height: 5px;
@@ -290,14 +361,71 @@ li a {
     #sidebar.active {
         left: 0;
     }
+
+    /* ................................... */
+    .containers {
+        width: 100%;
+        height: 30vh;
+        margin: 0 5px;
+        display: flex;
+    }
+
+
+    .gallery div {
+        width: 100%;
+        display: grid;
+        /* grid-template-columns: auto auto auto; */
+        grid-template-rows: auto;
+        grid-gap: 20px;
+        padding: 0px;
+        flex: none;
+    }
+
+    .gallery div img {
+        width: 100%;
+        filter: grayscale(100%);
+        transition: transform 0.5s;
+    }
+
+    .gallery::-webkit-scrollbar {
+
+        display: none;
+
+    }
+
+    .gallery-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 5%;
+
+    }
+
+    #backBtn,
+    #nextBtn {
+        width: 20px;
+        cursor: pointer;
+    }
+
+    .gallery div img:hover {
+        filter: grayscale(0);
+        cursor: pointer;
+        transform: scale(1.2);
+    }
+
+
+
+    /* ..................................... */
 }
 
 /* ......................... */
-/* slider  */
+
 
 
 /* ..................... */
 @media only screen and (max-width: 2000px) and (min-width: 600px) {
+
+
 
     #sidebar {
         display: none;
